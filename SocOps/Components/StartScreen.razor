@@ -1,11 +1,18 @@
-<div class="flex flex-col items-center justify-center min-h-full p-6 bg-gray-50">
-    <div class="text-center max-w-sm">
-        <h1 class="text-4xl font-bold text-gray-900 mb-2">Soc Ops</h1>
-        <p class="text-lg text-gray-600 mb-8">Social Bingo</p>
+<div class="flex flex-col items-center justify-center min-h-full p-6 bg-gradient-accent">
+    <!-- Decorative shapes (emojis as visual interest) -->
+    <div class="absolute top-10 left-8 text-3xl opacity-40 animate-fade-in">👥</div>
+    <div class="absolute top-20 right-12 text-3xl opacity-40 animate-fade-in" style="animation-delay: 0.1s;">🎉</div>
+    <div class="absolute bottom-20 left-1/4 text-3xl opacity-40 animate-fade-in" style="animation-delay: 0.2s;">⭐</div>
+    
+    <div class="text-center max-w-sm relative z-10">
+        <h1 class="title-main mb-1">Soc Ops</h1>
+        <p class="text-lg font-heading text-white mb-8" style="text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
+            Find Your Game Friends! 🎮
+        </p>
 
-        <div class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 mb-8">
-            <h2 class="font-semibold text-gray-800 mb-3">How to play</h2>
-            <ul class="text-left text-gray-600 text-sm space-y-2">
+        <div class="bg-white rounded-xl p-6 shadow-xl mb-8 animate-slide-down">
+            <h2 class="font-heading text-lg text-gray-900 mb-3">How to play</h2>
+            <ul class="text-left text-gray-700 text-sm space-y-2">
                 <li>• Find people who match the questions</li>
                 <li>• Tap a square when you find a match</li>
                 <li>• Get 5 in a row to win!</li>
@@ -14,7 +21,7 @@
 
         <button
             @onclick="OnStart"
-            class="w-full bg-accent text-white font-semibold py-4 px-8 rounded-lg text-lg active:bg-accent-light transition-colors">
+            class="btn-secondary w-full">
             Start Game
         </button>
     </div>

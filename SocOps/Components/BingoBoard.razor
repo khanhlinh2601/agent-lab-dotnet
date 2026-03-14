@@ -1,13 +1,19 @@
 @using SocOps.Models
 
-<div class="grid grid-cols-5 gap-1 w-full max-w-md mx-auto aspect-square">
-    @foreach (var square in Board)
-    {
-        <BingoSquare
-            Square="@square"
-            IsWinning="@WinningSquareIds.Contains(square.Id)"
-            OnClick="@(() => OnSquareClick.InvokeAsync(square.Id))" />
-    }
+<div class="relative">
+    <!-- Subtle background glow -->
+    <div class="absolute -inset-6 bg-gradient-primary opacity-10 rounded-2xl blur-2xl"></div>
+    
+    <!-- Board -->
+    <div class="grid grid-cols-5 gap-1 w-full max-w-md mx-auto aspect-square relative z-10 p-4 bg-card rounded-2xl shadow-glow">
+        @foreach (var square in Board)
+        {
+            <BingoSquare
+                Square="@square"
+                IsWinning="@WinningSquareIds.Contains(square.Id)"
+                OnClick="@(() => OnSquareClick.InvokeAsync(square.Id))" />
+        }
+    </div>
 </div>
 
 @code {
